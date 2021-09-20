@@ -23,7 +23,7 @@ To use the Kalman Filter, we define some assumption:
            - **e**<sub>t</sub> is a Gaussian noise that is a multivariate Gaussian random vector with mean = 0 and covariance = **R**<sub>t</sub>
        - Then,
          - <img src="https://latex.codecogs.com/gif.latex?p(\textbf{x}_{t}|\textbf{u}_{t},\textbf{x}_{t-1})="/> 
-           <img src="https://latex.codecogs.com/gif.latex?det(2\pi\textbf{R}_{t})^{-1/2}\ exp(-1/2(\textbf{x}_{t}-\textbf{A}_{t}\textbf{x}_{t-1}-\textbf{B}_{t}\textbf{u}_{t})^{T}\textbf{R}_{t}^{-1}(\textbf{x}_{t}-\textbf{A}_{t}\textbf{x}_{t-1}-\textbf{B}_{t}\textbf{u}_{t}))"/>
+           <img src="https://latex.codecogs.com/gif.latex?det%282%5Cpi%5Ctextbf%7BR%7D_%7Bt%7D%29%5E%7B-1%2F2%7D%5C%20exp%28-1%2F2%28%5Ctextbf%7Bx%7D_%7Bt%7D-%5Ctextbf%7BA%7D_%7Bt%7D%5Ctextbf%7Bx%7D_%7Bt-1%7D-%5Ctextbf%7BB%7D_%7Bt%7D%5Ctextbf%7Bu%7D_%7Bt%7D%29%5E%7BT%7D%5Ctextbf%7BR%7D_%7Bt%7D%5E%7B-1%7D%28%5Ctextbf%7Bx%7D_%7Bt%7D-%5Ctextbf%7BA%7D_%7Bt%7D%5Ctextbf%7Bx%7D_%7Bt-1%7D-%5Ctextbf%7BB%7D_%7Bt%7D%5Ctextbf%7Bu%7D_%7Bt%7D%29%29"/>
     2) Measurement probability p(**z**<sub>t</sub>| **x**<sub>t</sub>) can be represented as a linear function of **x**<sub>t</sub>, plus a Gaussian noise: 
        - **z**<sub>t</sub> = **C**<sub>t</sub> **x**<sub>t</sub> + **d**<sub>t</sub> 
          - Where:
@@ -32,10 +32,10 @@ To use the Kalman Filter, we define some assumption:
            - **C**<sub>t</sub> is a matrix, shape = (k, n)
            - **d**<sub>t</sub> is a Gaussian noise that is a multivariate Gaussian random vector with mean = 0 and covariance = **Q**<sub>t</sub>
        - Then,
-         - <img src="https://latex.codecogs.com/gif.latex?p(\textbf{z}_{t}|\textbf{z}_{t)"/> 
-           <img src="https://latex.codecogs.com/gif.latex?=det(2\pi\textbf{Q}_{t})^{-1/2}\ exp(-1/2(\textbf{z}_{t}-\textbf{C}_{t}\textbf{x}_{t})^{T}\textbf{Q}_{t}^{-1}(\textbf{z}_{t}-\textbf{C}_{t}\textbf{x}_{t}))"/>
+         - <img src="https://latex.codecogs.com/png.latex?p(\textbf{z}_{t}|\textbf{z}_{t)"/> 
+           <img src="https://latex.codecogs.com/png.latex?%3Ddet%282%5Cpi%5Ctextbf%7BQ%7D_%7Bt%7D%29%5E%7B-1%2F2%7D%5C%20exp%28-1%2F2%28%5Ctextbf%7Bz%7D_%7Bt%7D-%5Ctextbf%7BC%7D_%7Bt%7D%5Ctextbf%7Bx%7D_%7Bt%7D%29%5E%7BT%7D%5Ctextbf%7BQ%7D_%7Bt%7D%5E%7B-1%7D%28%5Ctextbf%7Bz%7D_%7Bt%7D-%5Ctextbf%7BC%7D_%7Bt%7D%5Ctextbf%7Bx%7D_%7Bt%7D%29%29"/>
     3) Belief of state at sthe initial timestep must have a Gaussian distribution with mean **µ**<sub>0</sub> and variance **Σ**<sub>0</sub>:
-       - <img src="https://latex.codecogs.com/gif.latex?bel(\textbf{x}_{0})= p(\textbf{x}_{0}) = det(2\pi\Sigma_{0})^{-1/2}\ exp(-1/2(\textbf{x}_{0}-\mathbf{\mu}_{0})^{T}\Sigma_{0}^{-1}(\textbf{x}_{0}-\mathbf{\mu}_{0}))"/>
+       - <img src="https://latex.codecogs.com/png.latex?bel%28%5Ctextbf%7Bx%7D_%7B0%7D%29%3D%20p%28%5Ctextbf%7Bx%7D_%7B0%7D%29%20%3D%20det%282%5Cpi%5CSigma_%7B0%7D%29%5E%7B-1%2F2%7D%5C%20exp%28-1%2F2%28%5Ctextbf%7Bx%7D_%7B0%7D-%5Cmathbf%7B%5Cmu%7D_%7B0%7D%29%5E%7BT%7D%5CSigma_%7B0%7D%5E%7B-1%7D%28%5Ctextbf%7Bx%7D_%7B0%7D-%5Cmathbf%7B%5Cmu%7D_%7B0%7D%29%29"/>
 - We will use moment representation<sup>(*)</sup> to represent bel(**x**<sub>t</sub>). In other way, we represent bel(**x**<sub>t</sub>) by its mean **µ**<sub>t</sub> and **Σ**<sub>t</sub>
 
 Kalman Filter make a step-by-step calculation to update **µ**<sub>t</sub> and **Σ**<sub>t</sub> from previous **µ**<sub>t-1</sub> and  **Σ**<sub>t-1</sub> by using measurement and control data  **u**<sub>t</sub>  and  **z**<sub>t</sub> 
