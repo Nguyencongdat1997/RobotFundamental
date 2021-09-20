@@ -49,7 +49,7 @@ Pseudocode algorithm will be:
 
 </center>
 
-_Sebastian Thrun,, Wolfram Burgard, and Dieter Fox. Probabilistic robotics. MIT press, 2005 (Page 36)_
+_Sebastian Thrun, Wolfram Burgard, and Dieter Fox. Probabilistic robotics. MIT press, 2005. Page 36_
 
 ### Derivation
 - TODO
