@@ -1,3 +1,6 @@
+# Introduction
+
+### Definition
 Kalman Filter is a variant of Bayes Filter which is built to calculate a belief distribution of state of system, given measurement data and control data. 
 - Formally, we want to calculate bel(**x**<sub>t</sub>) = p(**x**<sub>t</sub>| **z**<sub>1:t</sub>, **u**<sub>1:t</sub>)
   - Where:
@@ -37,6 +40,7 @@ To use the Kalman Filter, we define some assumption:
 
 Kalman Filter make a step-by-step calculation to update **µ**<sub>t</sub> and **Σ**<sub>t</sub> from previous **µ**<sub>t-1</sub> and  **Σ**<sub>t-1</sub> by using measurement and control data  **u**<sub>t</sub>  and  **z**<sub>t</sub> 
 
+### Pseudocode algorithm
 Pseudocode algorithm will be:
 
 <center>
@@ -47,3 +51,17 @@ Pseudocode algorithm will be:
 
 _Sebastian Thrun,, Wolfram Burgard, and Dieter Fox. Probabilistic robotics. MIT press, 2005 (Page 36)_
 
+### Derivation
+- TODO
+
+# Experiments
+Requirement description: <a href="http://stefanosnikolaidis.net/course-files/CS545/HW/hw2.pdf">Section 2 - CSCI545, USC, Fall 2019 </a> by
+<a href="http://www.stefanosnikolaidis.net/"> Prof. Stefanos Nikolaidis </a>
+
+### Test 1:
+<center>
+Section 2.a
+
+![img_1.png](experiment1.png)
+
+</center>
