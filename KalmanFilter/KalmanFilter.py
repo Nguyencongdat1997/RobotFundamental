@@ -7,9 +7,9 @@ class KalmanFilter:
 
         :param mu0: initial mean of bel(x_0)
         :param sigma0: initial sigma of bel(x_0)
-        :param A: coefficient matrix r.t previous x, used in linear formation of state x. Shape = (n,n)
-        :param B: coefficient matrix r.t u, used in linear formation of state x. Shape = (m,m)
-        :param C: coefficient matrix r.t x, used in linear formation of measurement z. Shape = (k,n)
+        :param A: correlation matrix between x and previous x, used in linear formation of state x. Shape = (n,n)
+        :param B: correlation matrix between x and u, used in linear formation of state x. Shape = (m,m)
+        :param C: correlation matrix between z and x, used in linear formation of measurement z. Shape = (k,n)
         :param R: variance matrix of Gaussian noise et of x
         :param Q: variance matrix of Gaussian noise dt of z
         """

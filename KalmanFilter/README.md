@@ -45,14 +45,14 @@ Pseudocode algorithm will be:
 
 <center>
 
-![img.png](kf.png)
+![img.png](doc_imgs/kf.png)
 
 </center>
 
 _Sebastian Thrun, Wolfram Burgard, and Dieter Fox. Probabilistic robotics. MIT press, 2005. Page 36_
 
 ### Derivation
-- TODO
+- TOWRITE
 
 # Experiments
 Requirement description: <a href="http://stefanosnikolaidis.net/course-files/CS545/HW/hw2.pdf">Section 2 - CSCI545, USC, Fall 2019 </a> by
@@ -62,6 +62,6 @@ Requirement description: <a href="http://stefanosnikolaidis.net/course-files/CS5
 <center>
 Section 2.a
 
-![img_1.png](experiment1.png)
+![img_1.png](doc_imgs/experiment1.png)
 
 </center>
